@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302826861923",
+    "project_id": "lifemate-c0570",
+    "storage_bucket": "lifemate-c0570.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302826861923:android:582b5ddf81ce40b8818f56",
+        "android_client_info": {
+          "package_name": "com.minusha.lifemate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi5bDeqe1sQM9dVOVYofZ0X1UJjxsi3x0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
