@@ -8,6 +8,7 @@ data class Task(
     val description: String = "",
     val isDone: Boolean = false,
     val dueDate: Long? = null,
+    val category: String = "Work", // Work, Personal, Fitness
     val priority: Int = 0, // 0: low, 1: medium, 2: high
     val createdAt: Long = System.currentTimeMillis()
 )

@@ -1,5 +1,6 @@
 package com.minusha.lifemate.view
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -56,6 +57,19 @@ fun AppNavigation() {
                 },
                 onAddTaskClick = {
                     navController.navigate("add_task")
+                },
+                // Add these new parameters for mood tracking features
+                onMoodTrackerClick = {
+                    navController.navigate("mood_tracker")
+                },
+                onMoodHistoryClick = {
+                    navController.navigate("mood_history")
+                },
+                onAddMoodClick = {
+                    navController.navigate("add_mood")
+                },
+                onSettingsClick = {
+                    navController.navigate("settings")
                 }
             )
         }
@@ -66,8 +80,8 @@ fun AppNavigation() {
                     navController.navigate("add_task")
                 },
                 onTaskClick = { taskId ->
-                    // TODO: Navigate to task detail screen
-                    // For now, just a placeholder
+                    // In the future, you can navigate to task detail screen
+                    // For now, we don't have task detail screen
                 }
             )
         }
@@ -78,6 +92,27 @@ fun AppNavigation() {
                     navController.popBackStack()
                 }
             )
+        }
+
+        // Add these new routes for mood tracking features
+        composable("mood_tracker") {
+            // Temporary placeholder until MoodTrackerScreen is implemented
+            Text("Mood Tracker Screen - Coming Soon")
+        }
+
+        composable("mood_history") {
+            // Temporary placeholder until MoodHistoryScreen is implemented
+            Text("Mood History Screen - Coming Soon")
+        }
+
+        composable("add_mood") {
+            // Temporary placeholder until AddMoodScreen is implemented
+            Text("Add Mood Screen - Coming Soon")
+        }
+
+        composable("settings") {
+            // Temporary placeholder until SettingsScreen is implemented
+            Text("Settings Screen - Coming Soon")
         }
     }
 }

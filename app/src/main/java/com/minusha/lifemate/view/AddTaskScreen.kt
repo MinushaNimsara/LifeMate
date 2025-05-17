@@ -8,11 +8,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.minusha.lifemate.ui.theme.LifeMateTheme
 import com.minusha.lifemate.viewmodel.TaskViewModel
+import java.text.SimpleDateFormat
 import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -151,10 +153,19 @@ fun AddTaskScreen(
     }
 }
 
+@Composable
+fun formatDate(timestamp: Long): String {
+    val date = Date(timestamp)
+    val formatter = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+    return formatter.format(date)
+}
+
 @Preview(showBackground = true)
 @Composable
 fun AddTaskScreenPreview() {
     LifeMateTheme {
-        AddTaskScreen(onBackClick = {})
+        AddTaskScreen(
+            onBackClick = {}
+        )
     }
 }
